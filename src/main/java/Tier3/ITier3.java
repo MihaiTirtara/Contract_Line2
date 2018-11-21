@@ -3,6 +3,8 @@ package Tier3;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
+import model.Account;
+
 
 public interface ITier3 extends Remote
 {
@@ -10,6 +12,8 @@ public interface ITier3 extends Remote
 	public boolean checkId(String id )throws RemoteException;
 	
 	public void CreateAccount( String id, String password, String phoneNumber,String fName,String lName ) throws RemoteException;
+	
+	public Account GetAccountById(String id) throws RemoteException;
 	
 	public boolean checkId_password(String id, String password) throws RemoteException;
 	

@@ -9,7 +9,9 @@ import java.rmi.server.UnicastRemoteObject;
 import static Tier3.ITier3.T3_SERVICE_NAME;
 
 import Tier3.ITier3;
+import model.Account;
 import security.HashFuunction;
+import security.NumberGenerator;
 
 
 public class Tier2Controller
@@ -48,6 +50,32 @@ public boolean FirstAuth(String id, String password) throws RemoteException
 {
 	return tier3.checkId_password(id, password);
 	
+}
+
+
+public void sendAuthCode(String id) 
+{
+	
+}
+
+
+public boolean SecondAuth(String id, String number) throws RemoteException 
+{
+	Account account = tier3.GetAccountById(id);
+	String phoneNumber = account.getPhoneNumber();
+	NumberGenerator numberGenerator = new NumberGenerator();
+	String code = numberGenerator.RandomSequence();
+	SmsSender.SendSms(phoneNumber, code);
+	
+	if(number == code)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+
 }
 
 

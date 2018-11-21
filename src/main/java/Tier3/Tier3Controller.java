@@ -96,6 +96,16 @@ System.out.println("Database is on");
 			return false;
 		}
 	}
+
+	public Account GetAccountById(String id) throws RemoteException
+	{
+		SessionFactory sessionFactory = new Configuration().configure("hibernate_system.cfg.xml").buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Account account = session.get(Account.class,id);
+		
+		return account;
+		
+	}
 	
 }
 

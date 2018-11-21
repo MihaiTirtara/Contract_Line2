@@ -12,7 +12,7 @@ public class NumberGenerator
 	        return ALPHABET.charAt(rng.nextInt(ALPHABET.length()));
 	    }
 
-	    public  StringBuilder  RandomSequence()
+	    public  String  RandomSequence()
 	    {
 	    	int length = 5;
 	    	
@@ -21,6 +21,6 @@ public class NumberGenerator
 	            length--;
 	            sb.append(randomChar());
 	        }
-	        return sb;
+	        return sb.toString();
 	    }
 	}
