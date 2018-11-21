@@ -1,20 +1,23 @@
+package Tier1;
 
 
 
 
-import java.awt.event.ActionEvent;
+
+import javafx.event.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class MainController{
+public class MainController implements Initializable{
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -30,12 +33,12 @@ public class MainController{
 
     @FXML
     void btnLogIn(ActionEvent event) {
-
+       System.out.println("log");
     }
 
     @FXML
     void btnReg(ActionEvent event) {
-
+       System.out.println("reg");
     }
 //    @FXML
 //    void deleteEvent(ActionEvent event)
@@ -78,4 +81,10 @@ public class MainController{
         assert btnReg != null : "fx:id=\"btnReg\" was not injected: check your FXML file 'Untitled'.";
 
     }
+
+   public void initialize(URL arg0, ResourceBundle arg1)
+   {
+      // TODO Auto-generated method stub
+      
+   }
 }

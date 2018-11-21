@@ -1,3 +1,5 @@
+package Tier1;
+
 
 
 import javafx.application.Application;
@@ -31,7 +33,7 @@ public class Main extends Application
       loader.setController(new MainController());
 
       // set the location of the FXML doc
-      loader.setLocation(getClass().getResource("Mainwindow.fxml"));
+      loader.setLocation(getClass().getResource("mainwindow.fxml"));
       Parent root = loader.load();
 
       // Build the scene graph
@@ -40,7 +42,7 @@ public class Main extends Application
 
       // show the window using the scene graph
 
-      primaryStage.setTitle("VIA Main");
+      primaryStage.setTitle("Berlin");
       primaryStage.setScene(scene);
       primaryStage.show();
 

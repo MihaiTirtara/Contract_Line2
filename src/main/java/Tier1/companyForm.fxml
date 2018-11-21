@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="34.0" text="Company name" />
+      <Label layoutX="14.0" layoutY="80.0" text="ID of CEO" />
+      <Label layoutX="14.0" layoutY="135.0" text="CEO" />
+      <TextField fx:id="txtNameComp" layoutX="107.0" layoutY="30.0" onAction="#txtNameComp" />
+      <TextField fx:id="txtIdCeo" layoutX="107.0" layoutY="76.0" onAction="#txtIdCeo" />
+      <TextField fx:id="txtCeo" layoutX="107.0" layoutY="131.0" onAction="#txtCeo" />
+      <TableView fx:id="tblPartici" layoutX="107.0" layoutY="296.0" prefHeight="116.0" prefWidth="149.0">
+        <columns>
+          <TableColumn fx:id="columnParti" prefWidth="75.0" text="Participants" />
+          <TableColumn fx:id="columnId" prefWidth="75.0" text="Id" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSearch" layoutX="283.0" layoutY="76.0" mnemonicParsing="false" onAction="#btnSearch" text="Search" />
+      <Button fx:id="btnAdd" layoutX="283.0" layoutY="131.0" mnemonicParsing="false" onAction="#btnAdd" text="Add" />
+      <Circle fx:id="crcleMsg" fill="DODGERBLUE" layoutX="256.0" layoutY="19.0" onMouseDragOver="#crcleMsg" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="txtParticiId" layoutX="107.0" layoutY="194.0" onAction="#txtParticiId" />
+      <Label layoutX="12.0" layoutY="198.0" text="participants ID" />
+      <TextField fx:id="txtPartici" layoutX="107.0" layoutY="250.0" onAction="#txtPartici" />
+      <Label layoutX="12.0" layoutY="254.0" text="Participant" />
+      <Button fx:id="btnAddParti" layoutX="283.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnAddParti" text="Add" />
+      <Button fx:id="btnSearchPartiId" layoutX="283.0" layoutY="194.0" mnemonicParsing="false" onAction="#btnSearchPartiId" text="Search" />
+      <TextField fx:id="txtBankRegNmbr" layoutX="109.0" layoutY="479.0" onAction="#txtBankRegNmbr" />
+      <Label layoutX="14.0" layoutY="483.0" text="Bank reg Nmbr" />
+      <Label layoutX="12.0" layoutY="422.0" text="Choose a bank" />
+      <Button fx:id="btnBank1" layoutX="109.0" layoutY="418.0" mnemonicParsing="false" onAction="#btnBank1" text="1" />
+      <Button fx:id="btnBank2" layoutX="152.0" layoutY="418.0" mnemonicParsing="false" onAction="#btnBank2" text="2" />
+      <Button fx:id="btnBank3" layoutX="199.0" layoutY="418.0" mnemonicParsing="false" onAction="#btnBank3" text="3" />
+   </children>
+</AnchorPane>
