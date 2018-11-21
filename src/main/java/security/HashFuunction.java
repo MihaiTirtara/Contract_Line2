@@ -1,12 +1,11 @@
-package Tier2;
+package security;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public  class Security 
+public class HashFuunction 
 {
-
-	public static String HashFunction(String password )
+	public static String HashPassword(String password )
 	{
 		MessageDigest md = null;
 		try {
@@ -26,4 +25,5 @@ public  class Security
 		String passwordHex = sb.toString();
 		return passwordHex.toUpperCase();
 	}
+
 }
