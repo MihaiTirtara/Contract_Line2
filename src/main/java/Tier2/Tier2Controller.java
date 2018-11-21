@@ -9,6 +9,7 @@ import java.rmi.server.UnicastRemoteObject;
 import static Tier3.ITier3.T3_SERVICE_NAME;
 
 import Tier3.ITier3;
+import security.HashFuunction;
 
 
 public class Tier2Controller
@@ -36,7 +37,7 @@ public void Register(String id, String password, String phoneNumber, String fNam
 		throws RemoteException
 {
 	
-	String hash_pass = Security.HashFunction(password);
+	String hash_pass = HashFuunction.HashPassword(password);
 	
 	tier3.CreateAccount(id, hash_pass, phoneNumber, fName, lName);
 	
